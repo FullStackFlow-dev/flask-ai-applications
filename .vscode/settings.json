@@ -1,0 +1,13 @@
+{
+  "python.defaultInterpreterPath": "${workspaceFolder}\\venv\\Scripts\\python.exe",
+  "python.analysis.extraPaths": [
+    "${workspaceFolder}/Module 1 - Pratiques de codage et concepts d'empaquetage en Python",
+    "${workspaceFolder}/Module 2 - Déploiement d'une application Web avec Flask",
+    "${workspaceFolder}/Module 3 - Création d'une application AI et déploiement à l'aide de Flask"
+  ],
+  "python.testing.pytestEnabled": true,
+  "python.testing.pytestArgs": [
+    "."
+  ],
+  "python.testing.unittestEnabled": false
+}

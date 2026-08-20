@@ -40,7 +40,7 @@ Les deux serveurs écoutent par défaut sur `http://127.0.0.1:5000`; lancez-les 
 ```powershell
 python -m pytest
 python -m black --check .
-python -m pylint "Module 1 - Pratiques de codage et concepts d'empaquetage en Pytho/learning_tools"
+python -m pylint "Module 1 - Pratiques de codage et concepts d'empaquetage en Python/learning_tools"
 ```
 
 ## GitHub

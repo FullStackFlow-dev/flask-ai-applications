@@ -14,7 +14,9 @@ venv/
 
 # Local data and IDE files
 *.db
-.vscode/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
 .idea/
 
 # Build artefacts

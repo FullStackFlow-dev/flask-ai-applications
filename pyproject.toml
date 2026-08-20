@@ -1,6 +1,6 @@
 [tool.pytest.ini_options]
 testpaths = [
-  "Module 1 - Pratiques de codage et concepts d'empaquetage en Pytho/tests",
+  "Module 1 - Pratiques de codage et concepts d'empaquetage en Python/tests",
   "Module 2 - Déploiement d'une application Web avec Flask/tests",
   "Module 3 - Création d'une application AI et déploiement à l'aide de Flask/tests",
 ]
