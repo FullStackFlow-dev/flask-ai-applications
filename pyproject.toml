@@ -1,0 +1,21 @@
+[tool.pytest.ini_options]
+testpaths = [
+  "Module 1 - Pratiques de codage et concepts d'empaquetage en Pytho/tests",
+  "Module 2 - Déploiement d'une application Web avec Flask/tests",
+  "Module 3 - Création d'une application AI et déploiement à l'aide de Flask/tests",
+]
+python_files = ["test_*.py"]
+
+[tool.black]
+line-length = 88
+target-version = ["py313"]
+
+[tool.isort]
+profile = "black"
+line_length = 88
+
+[tool.pylint.main]
+py-version = "3.13"
+
+[tool.pylint.format]
+max-line-length = 88
