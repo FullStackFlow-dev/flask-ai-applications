@@ -1,5 +1,4 @@
 {
-  "python.defaultInterpreterPath": "${workspaceFolder}\\venv\\Scripts\\python.exe",
   "python.analysis.extraPaths": [
     "${workspaceFolder}/Module 1 - Pratiques de codage et concepts d'empaquetage en Python",
     "${workspaceFolder}/Module 2 - Déploiement d'une application Web avec Flask",
