@@ -23,6 +23,40 @@ Catégories utilisées :
   — Fichier d'exploration et d'exemples du Module 1
 - [`CHANGELOG.md`](CHANGELOG.md)
   — Ce fichier, journal exhaustif des modifications du projet
+- [`Module 1/.../my_math/basic.py`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/my_math/basic.py)
+  — Nouveau module arithmétique avec 3 fonctions : `square`, `double`, `add`
+- [`Module 1/.../my_math/stats.py`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/my_math/stats.py)
+  — Nouveau module statistique avec 2 fonctions : `mean`, `median`
+- [`Module 1/.../my_math/README.md`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/my_math/README.md)
+  — Documentation du paquet `my_math` : description des fonctions, exemples d'utilisation
+
+### Modifié — Mise en conformité de `my_math/basic.py` et `my_math/stats.py`
+
+Les deux fichiers ont été réécrits pour respecter les normes du projet (`black`, `pylint 10/10`, style `learning_tools`) :
+
+#### [`basic.py`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/my_math/basic.py)
+
+| Avant | Après |
+|---|---|
+| Docstrings en anglais (une ligne) | Docstrings en français avec sections `Args` / `Returns` |
+| Pas de type hints | `number: float -> float`, `a: float, b: float -> float` |
+| Pas de docstring de module | `"""Opérations arithmétiques de base…"""` ajouté |
+| 1 ligne vide entre fonctions | 2 lignes vides (norme `black`) |
+| `number ** 2` | `number**2` (norme `black` : pas d'espaces autour de `**`) |
+
+#### [`stats.py`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/my_math/stats.py)
+
+| Avant | Après |
+|---|---|
+| Docstrings en anglais (une ligne) | Docstrings en français avec sections `Args` / `Returns` |
+| Pas de type hints | `numbers: list[float] -> float` |
+| Pas de docstring de module | `"""Fonctions statistiques de base…"""` ajouté |
+| `numbers.sort()` — modifiait la liste originale | `sorted(numbers)` — liste originale **préservée** ✅ |
+| Variables `median1`, `median2`, `mymedian` | Simplifiées en `triee`, `milieu` |
+| 1 ligne vide entre fonctions | 2 lignes vides (norme `black`) |
+
+### Corrigé
+- [`stats.py`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/my_math/stats.py) — **Bug silencieux** : `numbers.sort()` modifiait la liste passée en argument (effet de bord), remplacé par `sorted()` qui retourne une nouvelle liste sans altérer l'originale
 
 ---
 
