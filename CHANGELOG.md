@@ -12,23 +12,31 @@ Catégories utilisées :
 
 ---
 
-## [Non publié] — en cours
+## [1eca578] — 2026-08-22 · *Ajout du module geometry et résumé du Module 1*
 
 ### Ajouté
-- [`Module 1/.../tests/test_modulaire.py`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/tests/test_modulaire.py)
-  — Tests modulaires organisés en deux classes `pytest` :
-  - `TestWordCountValides` (6 cas) : phrase normale, chaîne vide, espaces multiples, un mot, espaces seuls, ponctuation
-  - `TestWordCountInvalides` (4 cas) : `int`, `list`, `None`, `float` → vérifie que `TypeError` est levée
-- [`Module 1/.../sample1.py`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/sample1.py)
-  — Fichier d'exploration et d'exemples du Module 1
-- [`CHANGELOG.md`](CHANGELOG.md)
-  — Ce fichier, journal exhaustif des modifications du projet
+- [`Module 1/.../my_math/geometry.py`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/my_math/geometry.py)
+  — Nouveau module de géométrie avec 2 fonctions :
+  - `area_of_rectangle(length, width)` — retourne l'aire d'un rectangle (`length * width`)
+  - `area_of_circle(radius)` — retourne l'aire d'un cercle (`math.pi * radius²`)
+- [`Module 1/.../resume_module1.md`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/resume_module1.md)
+  — Résumé Markdown du Module 1 : cycle de vie, PEP8, test unitaire, création de package
 - [`Module 1/.../my_math/basic.py`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/my_math/basic.py)
-  — Nouveau module arithmétique avec 3 fonctions : `square`, `double`, `add`
+  — Module arithmétique avec 3 fonctions : `square`, `double`, `add`
 - [`Module 1/.../my_math/stats.py`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/my_math/stats.py)
-  — Nouveau module statistique avec 2 fonctions : `mean`, `median`
+  — Module statistique avec 2 fonctions : `mean`, `median`
 - [`Module 1/.../my_math/README.md`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/my_math/README.md)
   — Documentation du paquet `my_math` : description des fonctions, exemples d'utilisation
+
+### Modifié
+- [`Module 1/.../my_math/__init__.py`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/my_math/__init__.py)
+  — Import du nouveau module `geometry` ajouté ; `__all__` étendu avec `area_of_rectangle` et `area_of_circle`
+
+  ```python
+  # Ajouté dans __init__.py
+  from .geometry import area_of_rectangle, area_of_circle
+  __all__ = [..., "area_of_rectangle", "area_of_circle"]
+  ```
 
 ### Modifié — Mise en conformité de `my_math/basic.py` et `my_math/stats.py`
 
@@ -57,6 +65,20 @@ Les deux fichiers ont été réécrits pour respecter les normes du projet (`bla
 
 ### Corrigé
 - [`stats.py`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/my_math/stats.py) — **Bug silencieux** : `numbers.sort()` modifiait la liste passée en argument (effet de bord), remplacé par `sorted()` qui retourne une nouvelle liste sans altérer l'originale
+
+---
+
+## [Non publié] — en cours
+
+### Ajouté
+- [`Module 1/.../tests/test_modulaire.py`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/tests/test_modulaire.py)
+  — Tests modulaires organisés en deux classes `pytest` :
+  - `TestWordCountValides` (6 cas) : phrase normale, chaîne vide, espaces multiples, un mot, espaces seuls, ponctuation
+  - `TestWordCountInvalides` (4 cas) : `int`, `list`, `None`, `float` → vérifie que `TypeError` est levée
+- [`Module 1/.../sample1.py`](Module%201%20-%20Pratiques%20de%20codage%20et%20concepts%20d'empaquetage%20en%20Python/sample1.py)
+  — Fichier d'exploration et d'exemples du Module 1
+- [`CHANGELOG.md`](CHANGELOG.md)
+  — Ce fichier, journal exhaustif des modifications du projet
 
 ---
 
