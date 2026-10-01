@@ -87,7 +87,7 @@ typing-inspection==0.4.4
 # IBM Watson AI
 ibm-watson==11.2.0
 ibm-cloud-sdk-core==3.26.0
-PyJWT==2.13.0
+PyJWT==2.15.0
 websocket-client==1.9.0
 
 # Divers / support
